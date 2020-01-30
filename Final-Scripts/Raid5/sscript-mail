@@ -1,4 +1,9 @@
 #!/bin/bash
+apt install msmtp
+apt install msmtp-mta
+
+echo "MAILADDR kisebela.a@gmail.com " >> /etc/mdadm/mdadm.conf
+echo "MAILFROM abel-VirtualBox " >> /etc/mdadm/mdadm.conf
 
 mdadm --monitor --scan --test -1
 

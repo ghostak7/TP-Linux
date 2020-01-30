@@ -1,6 +1,7 @@
 #!/bin/bash
 
-mdadm --monitor --scan --test -1
+apt install msmtp
+apt install msmtp-mta
 
 echo "# Set default values for all following accounts." > ~/.msmtprc
 echo "defaults" >> ~/.msmtprc

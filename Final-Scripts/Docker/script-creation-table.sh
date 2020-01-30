@@ -15,10 +15,10 @@ date_fin_projet DATE,
 PRIMARY KEY (id_projet));
 
 #creation de la table users_projets
-CREATE TABLE users_projects (id_user AUTO_INCREMENT NOT NULL, 
-id_projet NOT NULL, 
-id_users_projects BIGINT, 
-PRIMARY KEY (id_user,  id_projet));  
+CREATE TABLE users_projects (id_users_projets BIGINT AUTO_INCREMENT NOT NULL, 
+id_user BIGINT NOT NULL,
+id_projet BIGINT NOT NULL, 
+PRIMARY KEY (id_users_projets));  
 
 ALTER TABLE users_projects ADD CONSTRAINT FK_users_projects_id_user FOREIGN KEY (id_user) REFERENCES user (id_user); 
 ALTER TABLE users_projects ADD CONSTRAINT FK_users_projects_id_projet FOREIGN KEY (id_projet) REFERENCES projet (id_projet); 
