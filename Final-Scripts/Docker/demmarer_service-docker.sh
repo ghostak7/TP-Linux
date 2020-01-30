@@ -8,4 +8,4 @@ else
 	echo "Pas besoin de supprimer docker.pid next "
 fi
 dockerd
-docker-compose -f docker-compose-test.yml up
+docker-compose -f docker-compose-final.yml up
