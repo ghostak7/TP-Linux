@@ -10,26 +10,19 @@ services:
    MYSQL_ROOT_PASSWORD: root
   ports:
    - "3306:3306"
-  
- adminer:
-  image: adminer
-  restart: always
-  ports:
-   - 8080:8080
 
  phpmyadmin:
   image: phpmyadmin/phpmyadmin
   container_name: c_phpmyadmin
   links:
-   -"db:db"
+   ['db']
   environment:
    MYSQL_USERNAME: root
    MYSQL_ROOT_PASSWORD: root
   restart: always
   ports:
-   - "8080:80"
-  volumes:
-   -"/sessions"
+   - "8080:8080"
+
 
 
 
